@@ -1,2 +1,2 @@
-# Youtube-Unlimited-Volume-Booster
+# Youtube-Volume-Booster
 this youtube volume booster is unlimited
