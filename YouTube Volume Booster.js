@@ -2,7 +2,7 @@
 // @name         YouTube Volume Booster with GUI Slider
 // @namespace    http://tampermonkey.net/
 // @version      1.3
-// @description  Adds a GUI slider to control YouTube's volume and boosts volume up to 2000%
+// @description  Adds a GUI slider to control YouTube's volume and boosts volume up to 100%
 // @author       Marse Lavedo
 // @match        *://www.youtube.com/*
 // @updateURL    https://raw.githubusercontent.com/LittleYoungBlud/Youtube-Unlimited-Volume-Booster/refs/heads/main/YouTube%20Volume%20Booster.js
