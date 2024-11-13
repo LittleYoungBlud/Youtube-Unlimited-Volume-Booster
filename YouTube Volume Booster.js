@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         YouTube Volume Booster with GUI Slider
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Adds a GUI slider to control YouTube's volume and boosts volume up to 100%
+// @version      1.3
+// @description  Adds a GUI slider to control YouTube's volume and boosts volume up to 2000%
 // @author       Marse Lavedo
 // @match        *://www.youtube.com/*
 // @updateURL    https://raw.githubusercontent.com/LittleYoungBlud/Youtube-Unlimited-Volume-Booster/refs/heads/main/YouTube%20Volume%20Booster.js
@@ -30,7 +30,6 @@
         const volumeSlider = document.createElement('input');
         volumeSlider.type = 'range';
         volumeSlider.min = '0';
-        // edit the value below to edit max volume of slider MAX is 100
         volumeSlider.max = '20';
         volumeSlider.step = '0.1';
         volumeSlider.value = '1';
@@ -56,6 +55,15 @@
                 console.log(`Volume set to ${volumeSlider.value * 100}%.`);
             } else {
                 console.log('Video player not found.');
+            }
+        });
+
+        volumeSlider.addEventListener('dblclick', function() {
+            volumeSlider.value = '1';
+            const videoPlayer = document.querySelector('video');
+            if (videoPlayer && gainNode) {
+                gainNode.gain.value = 1;
+                console.log('Volume reset to 100%.');
             }
         });
     }
